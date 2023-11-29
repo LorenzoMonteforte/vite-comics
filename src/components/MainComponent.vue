@@ -1,9 +1,11 @@
 <script>
 import Jumbotrone from "./Jumbotrone.vue";
+import SecondSection from "./SecondSection.vue";
 export default {
     name: "MainComponent",
     components: {
-        Jumbotrone
+        Jumbotrone,
+        SecondSection
     }
 }
 </script>
@@ -11,6 +13,7 @@ export default {
 <template>
     <main>
         <Jumbotrone />
+        <SecondSection />
     </main>
 </template>
 
