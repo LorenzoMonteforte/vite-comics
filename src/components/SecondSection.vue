@@ -5,23 +5,23 @@ export default {
         return {
             iconsContainer: [
                 {
-                    srcIcon: "../assets/img/buy-comics-digital-comics.png",
+                    srcIcon: "/src/assets/img/buy-comics-digital-comics.png",
                     titleIcon: "DIGITAL COMICS"
                 },
                 {
-                    srcIcon: "../assets/img/buy-comics-merchandise.png",
+                    srcIcon: "/src/assets/img/buy-comics-merchandise.png",
                     titleIcon: "DC MERCHANDISE"
                 },
                 {
-                    srcIcon: "../assets/img/buy-comics-subscription.png",
+                    srcIcon: "/src/assets/img/buy-comics-subscriptions.png",
                     titleIcon: "SUBSCRIPTION"
                 },
                 {
-                    srcIcon: "../assets/img/buy-comics-shop-locator.png",
+                    srcIcon: "/src/assets/img/buy-comics-shop-locator.png",
                     titleIcon: "COMIC SHOP LOCATOR"
                 },
                 {
-                    srcIcon: "../assets/img/buy-comics-digital-comics.png",
+                    srcIcon: "/src/assets/img/buy-dc-power-visa.svg",
                     titleIcon: "DC POWER VISA"
                 }
             ]
@@ -73,5 +73,9 @@ section>div {
     margin-left: 0.5rem;
     font-size: 0.6rem;
     color: white;
+}
+
+.iconContainer:last-of-type>img {
+    height: 75%;
 }
 </style>
