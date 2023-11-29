@@ -5,26 +5,31 @@ export default {
         return {
             iconsContainer: [
                 {
-                    srcIcon: "/src/assets/img/buy-comics-digital-comics.png",
+                    srcIcon: "img/buy-comics-digital-comics.png",
                     titleIcon: "DIGITAL COMICS"
                 },
                 {
-                    srcIcon: "/src/assets/img/buy-comics-merchandise.png",
+                    srcIcon: "img/buy-comics-merchandise.png",
                     titleIcon: "DC MERCHANDISE"
                 },
                 {
-                    srcIcon: "/src/assets/img/buy-comics-subscriptions.png",
+                    srcIcon: "img/buy-comics-subscriptions.png",
                     titleIcon: "SUBSCRIPTION"
                 },
                 {
-                    srcIcon: "/src/assets/img/buy-comics-shop-locator.png",
+                    srcIcon: "img/buy-comics-shop-locator.png",
                     titleIcon: "COMIC SHOP LOCATOR"
                 },
                 {
-                    srcIcon: "/src/assets/img/buy-dc-power-visa.svg",
+                    srcIcon: "img/buy-dc-power-visa.svg",
                     titleIcon: "DC POWER VISA"
                 }
             ]
+        }
+    },
+    methods: {
+        getImagePath: function (img) {
+            return new URL(`../assets/${img}`, import.meta.url).href;
         }
     }
 }
@@ -34,7 +39,7 @@ export default {
     <section>
         <div>
             <div class="iconContainer" v-for="iconContainer in iconsContainer">
-                <img :src="iconContainer.srcIcon" :alt="iconContainer.titleIcon">
+                <img :src="getImagePath(iconContainer.srcIcon)" :alt="iconContainer.titleIcon">
                 <div>{{ iconContainer.titleIcon }}</div>
             </div>
         </div>

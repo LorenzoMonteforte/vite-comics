@@ -6,25 +6,30 @@ export default {
             socialLogo: [
                 {
                     nameSocialLogo: "Facebook",
-                    srcSocialLogo: "/src/assets/img/footer-facebook.png"
+                    srcSocialLogo: "img/footer-facebook.png"
                 },
                 {
                     nameSocialLogo: "Twitter",
-                    srcSocialLogo: "/src/assets/img/footer-twitter.png"
+                    srcSocialLogo: "img/footer-twitter.png"
                 },
                 {
                     nameSocialLogo: "You Tube",
-                    srcSocialLogo: "/src/assets/img/footer-youtube.png"
+                    srcSocialLogo: "img/footer-youtube.png"
                 },
                 {
                     nameSocialLogo: "Pinterest",
-                    srcSocialLogo: "/src/assets/img/footer-pinterest.png"
+                    srcSocialLogo: "img/footer-pinterest.png"
                 },
                 {
                     nameSocialLogo: "Periscope",
-                    srcSocialLogo: "/src/assets/img/footer-periscope.png"
+                    srcSocialLogo: "img/footer-periscope.png"
                 }
             ]
+        }
+    },
+    methods: {
+        getImagePath: function (img) {
+            return new URL(`../assets/${img}`, import.meta.url).href;
         }
     }
 }
@@ -42,7 +47,7 @@ export default {
                 <div>
                     <strong>FOLLOW US</strong>
                 </div>
-                <img v-for="singleSocialLogo in socialLogo" :src="singleSocialLogo.srcSocialLogo"
+                <img v-for="singleSocialLogo in socialLogo" :src="getImagePath(singleSocialLogo.srcSocialLogo)"
                     :alt="singleSocialLogo.nameSocialLogo">
             </div>
         </div>
